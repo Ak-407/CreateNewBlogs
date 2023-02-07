@@ -8,7 +8,8 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://127.0.0.1:27017/test',  {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://jsamaan:amaan123@cluster0.vz55wc0.mongodb.net/jsamaan?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true });
+
 const Blog = mongoose.Schema({
     title:String,
     content:String,
