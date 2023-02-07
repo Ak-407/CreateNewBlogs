@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- ///////////////////////         NAVBAR        ////////////////////////////////// -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Writing Wonder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-target="#navbarNavDropdown"  aria-haspopup="true" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="navbar-toggler-icon"></span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://syedamaan.vercel.app/">Owner</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://syedamaan.vercel.app/about">About Me</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+          <div class="header-c">
+          <h1 style="text-align:center ;">Current Year : <%=day%></h1>
+          <% item.forEach(function(item){  %>
+            <h1><%=item.title%></h1>
+            <p><%=item.content%></p>
+            <% }) %>
+            
+            <form action="/" method="post">
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Title</span>
+              </div>
+              <input type="text" name="title" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Your Content</span>
+            </div>
+            <input class="form-control" name="content" aria-label="With textarea"></input>
+          </div>
+          <button type="submit" class="btn btn-success">Post</button>
+          </form>
+        </div>
+    </body>
+</html>

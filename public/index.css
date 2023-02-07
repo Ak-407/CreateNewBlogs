@@ -1,0 +1,15 @@
+nav{
+    padding: 0 20px;
+    font-family: 'Yeon Sung', cursive;
+}
+body{
+    font-family: 'Yeon Sung', cursive;
+}
+button{
+    margin-top: 20px;
+    align-items: center;
+    width: 100%;
+}
+.header-c{
+    padding:0  50px !important;
+}
