@@ -18,15 +18,6 @@ const Blog = mongoose.Schema({
 const blogs = mongoose.model("blogs", Blog);
 
 
-
-
-var data = ["hello", "amaan", "thr"];
-
-
-
-
-
-
 app.get("/", function(req,res){
     var today = new Date();
     var year = today.getFullYear();
@@ -43,7 +34,6 @@ app.post("/", function(req,res){
         content:content
     })
     blog2.save();
-    console.log(data);
     res.redirect("/");
 })
 
